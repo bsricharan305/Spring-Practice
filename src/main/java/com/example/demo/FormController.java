@@ -92,6 +92,7 @@ public class FormController {
 		return cust;
 	}
 	
+	//deleting customer object from database
 	@DeleteMapping("/customers/{cid}")
 	public Customers deleteCustomer(@PathVariable("cid") int cid) {
 	//public String getCustomers() {
@@ -102,6 +103,7 @@ public class FormController {
 		return c;
 	}
 	
+	//updating customer object
 	@PutMapping(path = "/customers", consumes = {"application/json"})
 	public Customers updateCustomer(@RequestBody Customers cust) {
 	//public String getCustomers() {
